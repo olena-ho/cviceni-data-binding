@@ -8,12 +8,13 @@ Zadání: Přidejte na prvek `input` událost `onChange`, která bude do stavu `
 
 export const Ukol2 = () => {
   const [login, setLogin] = useState('petr');
+  
 
   return (
     <>
       <label>
         Login:
-        <input type="text" />
+        <input type="text" value={login} onChange={(e) => setLogin(e.target.value)}/>
       </label>
     </>
   );
